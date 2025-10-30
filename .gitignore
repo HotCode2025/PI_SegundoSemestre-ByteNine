@@ -1,0 +1,11 @@
+/build/          # Directorio donde Ant genera los archivos de compilación
+/dist/           # Directorio donde Ant genera el JAR final
+*.jar            # Ignorar cualquier archivo JAR generado (excepto librerías)
+*.war
+*.zip
+*.log
+/nbproject/private/
+.DS_Store       # macOS
+Thumbs.db       # Windows
+*~
+*.bak
