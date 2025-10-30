@@ -9,3 +9,4 @@
 Thumbs.db       # Windows
 *~
 *.bak
+/JuegoAhorjado/nbproject/private/
