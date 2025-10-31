@@ -10,3 +10,5 @@ Thumbs.db       # Windows
 *~
 *.bak
 /JuegoAhorjado/nbproject/private/
+/JuegoAhorjado/dist/
+/JuegoAhorjado/build/
