@@ -38,4 +38,27 @@ public class AhorcadoApp {
     // ------------------------- ESTADO DE SESIÓN Y ACUMULACIÓN -------------------------
     private static Usuario usuarioLogueado = null; 
     private static List<RegistroPartida> historialPartidas = new ArrayList<>();
+    
+    /**
+     * CLASE INTERNA (Anidada): RegistroPartida
+     */
+    private static class RegistroPartida {
+        String palabraSecreta;
+        String resultado; 
+        int puntosObtenidos;
+
+        public RegistroPartida(String palabraSecreta, String resultado, int puntosObtenidos) {
+            this.palabraSecreta = palabraSecreta;
+            this.resultado = resultado;
+            this.puntosObtenidos = puntosObtenidos;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%-10s | %-15s | %s", 
+                                  resultado, 
+                                  palabraSecreta, 
+                                  (puntosObtenidos > 0 ? "+" : "") + puntosObtenidos + " pts");
+        }
+    }
 }
