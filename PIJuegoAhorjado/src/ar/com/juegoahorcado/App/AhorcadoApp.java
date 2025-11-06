@@ -61,4 +61,38 @@ public class AhorcadoApp {
                                   (puntosObtenidos > 0 ? "+" : "") + puntosObtenidos + " pts");
         }
     }
+    
+        /**
+     * MÉTODO PRINCIPAL: main
+     */
+    public static void main(String[] args) {
+        mostrarMensaje(
+            "Bienvenido al Ahorcado POO\n" +
+            "¡Por favor, inicia sesión o regístrate para comenzar!", 
+            "INICIO"
+        );
+        
+        
+   // Mostrar un menú para elegir entre diseño simple o GUI
+    String opcion = JOptionPane.showInputDialog(
+        null, 
+        "Elige el modo de juego:\n1. Consola\n2. Interfaz Gráfica", 
+        TITULO_APP, 
+        JOptionPane.QUESTION_MESSAGE
+    );
+
+    if ("2".equals(opcion)) {
+        // Si elige "2" (GUI), ejecutar la clase AhorcadoAppGUI 
+        AhorcadoAppGUI.main(args); // Esto ejecuta la GUI
+    } else {
+        // Si elige "1" (Consola), continuar con el flujo actual
+        mostrarMenuPrincipal(); // Esto sigue con la versión en consola
+    }
+
+    // Llamada para guardar los datos
+    GestorUsuarios.guardarDatos(); 
+    
+    // Mensaje final de salida
+    mostrarMensaje("Sesión finalizada. ¡Vuelve pronto!", "ADIÓS");
+}
 }
