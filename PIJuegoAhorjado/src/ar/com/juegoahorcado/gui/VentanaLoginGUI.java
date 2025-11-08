@@ -1,4 +1,4 @@
-package ar.com.juegoahorcado.gui.dominio;
+package ar.com.juegoahorcado.gui;
 
 import javax.swing.*;
 import java.awt.*;
