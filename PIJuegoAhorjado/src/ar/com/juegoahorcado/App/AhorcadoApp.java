@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 import ar.com.juegoahorcado.domain.Usuario; 
 import ar.com.juegoahorcado.domain.Rol;     
 import ar.com.juegoahorcado.domain.Palabra; 
-import ar.com.juegoahorcado.gui.dominio.AhorcadoAppGUI;
+import ar.com.juegoahorcado.gui.AhorcadoAppGUI;
+
 
 
 
