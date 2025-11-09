@@ -1,0 +1,65 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>460</x><y>0</y><w>280</w><h>180</h></coordinates><panel_attributes>JuegoBaseAbstracto
+--
+# usuarioActual: Usuario
+# palabraSecreta: Palabra
+--
++ JuegoBaseAbstracto(Usuario, Palabra)
+/+ iniciarJuego(): void/
+/+ jugarTurno(): boolean/
+/+ juegoTerminado(): boolean/
+/+ finalizarJuego(): void/
++ ejecutarJuego(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>420</y><w>280</w><h>190</h></coordinates><panel_attributes>JuegoAhorcado
+--
+- palabraOculta: char[]
+- intentosRestantes: int
+- letrasIntentadas: ArrayList&lt;Character&gt;
+- juegoGanado: boolean
+--
++ JuegoAhorcado(Usuario, Palabra)
++ iniciarJuego(): void
++ jugarTurno(): boolean
++ juegoTerminado(): boolean
++ finalizarJuego(): void
++ getResultadoPartida(): Partida</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>0</y><w>260</w><h>210</h></coordinates><panel_attributes>Usuario
+--
+- id: int
+- nombre: String
+- email: String
+- rol: Rol
+- nombreUsuario: String
+- puntuacionTotal: int
+- registroPartidas: ArrayList&lt;Partida&gt;
+--
++ Usuario(...)
++ registrarPartida(Partida): void
++ generarHistorial(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>420</y><w>260</w><h>100</h></coordinates><panel_attributes>Partida
+--
+- palabraAdivinada: String
+- resultado: boolean
+- puntos: int
+--
++ Partida(String, boolean, int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>890</x><y>0</y><w>220</w><h>120</h></coordinates><panel_attributes>Palabra
+--
+- palabra: String
+- pista: String
+--
++ Palabra(String, String)
++ getPalabra(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>420</y><w>260</w><h>100</h></coordinates><panel_attributes>GestorUsuarios
+--
+- Usuarios:
+--
++ login(String, String): Usuario
++ agregarUsuario(Usuario): void
++ generarRanking(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>290</y><w>240</w><h>90</h></coordinates><panel_attributes>Diccionario
+--
+- palabrasDisponibles:
+--
++ obtenerPalabraAleatoria(): Palabra
++ agregarPalabra(Palabra): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>200</y><w>130</w><h>240</h></coordinates><panel_attributes>lt=&lt;.
+(Gestiona)</panel_attributes><additional_attributes>100;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>200</y><w>140</w><h>240</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Composición&gt;&gt;</panel_attributes><additional_attributes>10;10;60;220</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>170</y><w>90</w><h>270</h></coordinates><panel_attributes>lt=&lt;.
+(Herencia)</panel_attributes><additional_attributes>10;10;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>110</y><w>90</w><h>200</h></coordinates><panel_attributes>lt=&lt;.
+(Gestiona)</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>460</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Crea&gt;&gt;</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>70</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=-
+- palabraSecreta</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>80</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=-
+- usuarioActual</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element></diagram>
